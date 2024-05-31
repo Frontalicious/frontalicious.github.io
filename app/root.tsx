@@ -6,7 +6,14 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 import styles from "./index.css?url"
-import {LinksFunction} from "@remix-run/node";
+import {LinksFunction, type MetaFunction} from "@remix-run/node";
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "Frontalicious - Delicious web development" },
+    { name: "description", content: "Welcome!" },
+  ];
+};
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: styles },
