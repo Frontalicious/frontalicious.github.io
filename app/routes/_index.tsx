@@ -1,17 +1,21 @@
 import type { MetaFunction } from "@remix-run/node";
+import React from "react";
+import {Hero} from "../components/Hero";
+import {Page} from "../components/Page";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix SPA" },
-    { name: "description", content: "Welcome to Remix (SPA Mode)!" },
+    { title: "Frontalicious - Delicious web development" },
+    { name: "description", content: "Welcome!" },
   ];
 };
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>Frontalicious.nl</h1>
-      Come back soon
-    </div>
+    <Page>
+    <section id="home" className="hero">
+      <Hero />
+    </section>
+    </Page>
   );
 }
